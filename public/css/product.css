@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    width: 100%;
+    font-family: 'Spartan', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Section Padding */
+.section-p1 {
+    padding: 20px 60px;
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+/* Buttons */
+button.normal {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 24px;
+    color: #fff;
+    background-color: #088178;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: background 0.3s ease-in-out;
+}
+
+button.normal:hover {
+    background-color: #065c5a;
+}
+
+button.white {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px 18px;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid #fff;
+    transition: background 0.3s ease-in-out;
+}
+
+button.white:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Grid Layout for Product Details */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Single Product Page */
+#productdetails {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd; /* Minimal border instead of shadow */
+}
+
+#productdetails .single-pro-image {
+    width: 40%;
+    max-width: 400px;
+}
+
+#productdetails .single-pro-image img {
+    width: 100%;
+    height: auto;
+}
+
+#productdetails .single-pro-details {
+    width: 55%;
+}
+
+#productdetails .single-pro-details h4 {
+    font-size: 20px;
+    color: #088178;
+    margin-bottom: 10px;
+}
+
+#productdetails .single-pro-details span {
+    line-height: 1.6;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 799px) {
+    .section-p1 {
+        padding: 30px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    #productdetails {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+
+    #productdetails .single-pro-image,
+    #productdetails .single-pro-details {
+        width: 100%;
+    }
+
+    button.normal {
+        width: 100%;
+    }
+}
+
+@media (max-width: 477px) {
+    .section-p1 {
+        padding: 15px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    #productdetails {
+        padding: 10px;
+    }
+}
